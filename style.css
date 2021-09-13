@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    ;
+}
+
+/* light-mode Desktop */
+body {
+    width: 1440px;
+    text-align: center;
+    background-color: #eee;
+    transition: 0.3s;
+}
+
+.background-image {
+    background-image: url(./images/bg-desktop-light.jpg);
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 1440px;
+    height: 40vh;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+.background-emptyplace {
+    height: 60vh;
+    width: 1440;
+
+}
+
+.app {
+    position: absolute;
+    left: 50%;
+    top: 13%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+
+
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header h1 {
+    width: 50%;
+    font-size: 40px;
+    letter-spacing: 13px;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+.app form {
+    width: 100%;
+    height: 7vh;
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.darkIcon {
+    cursor: pointer;
+}
+
+.app form button {
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background-color: white;
+    margin-left: calc((10%-23px)/(4));
+    margin-top: calc((4%-25px)/(2));
+    border: 1px solid #ccc;
+    transition: 0.3;
+
+
+
+}
+
+.app form button:hover {
+    border-color: hsl(192, 100%, 67%) hsl(192, 100%, 67%) hsl(280, 87%, 65%) hsl(280, 87%, 65%);
+    transform: rotate(260deg);
+}
+
+.app form input {
+    border: none;
+    width: 90%;
+    height: 100%;
+    outline: none;
+    border-radius: 5px;
+    color: #aaa;
+    transition: 0.3s;
+}
+
+.allTasks {
+    background-color: white;
+    width: 100%;
+    margin-top: 4%;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.allTasks .listOfTasks h3 {
+    width: 90%;
+}
+
+.task {
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    transition: 0.3s;
+}
+
+.task button {
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background-color: white;
+    margin-left: calc((10%-23px)/(4));
+    margin-top: calc((3%-23px)/(2));
+    border: 1px solid #ccc;
+    transition: 0.3s;
+
+}
+
+
+
+
+
+.task button:hover {
+    border-color: hsl(192, 100%, 67%) hsl(192, 100%, 67%) hsl(280, 87%, 65%) hsl(280, 87%, 65%);
+    transform: rotate(260deg);
+
+
+
+
+}
+
+.task h3 {
+    padding: 12px 20px;
+
+    font-weight: normal;
+
+}
+
+.allTasks .options {
+    display: flex;
+    justify-content: space-between;
+    color: #aaa;
+    padding: 10px 10px 15px 10px;
+    font-size: 14px;
+
+}
+
+
+
+
+
+.allTasks .options .filterOptions {
+    display: flex;
+
+}
+
+.allTasks .options .filterOptions li {
+    padding: 0 5px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.allTasks .options .filterOptions li:hover {
+    color: black;
+}
+
+.clearCompleted {
+    cursor: pointer;
+}
+
+.dragAndDtopInfo {
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 400;
+    color: #aaa;
+    margin-top: 18vh;
+}
+
+.allTasks .listOfTasks img {
+    height: 50%;
+    padding-top: 10px;
+    display: none;
+    cursor: pointer;
+}
+
+.allTasks .listOfTasks .task:hover img {
+    display: block;
+}
+
+.filterAllTasks.active {
+    color: darkblue;
+}
+
+.filterActiveTasks.active {
+    color: darkblue;
+}
+
+.filterTasksCompleted.active {
+    color: darkblue;
+}
+
+.task button.complete {
+    background: url('./images/icon-check.svg'), linear-gradient(110deg, hsl(192, 100%, 67%) 50%, hsl(280, 87%, 65%) 50%);
+    /* background-image: url('./images/icon-check.svg'); */
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+}
+
+.task button.complete+h3 {
+    color: #ccc;
+    text-decoration: line-through;
+}
+
+.task button.complete:hover {
+    border-color: hsl(192, 100%, 67%) hsl(192, 100%, 67%) hsl(280, 87%, 65%) hsl(280, 87%, 65%);
+    transform: rotate(0deg);
+
+}
+
+/* darkMode Desktop */
+.background-image.dark {
+    background-image: url(./images/bg-desktop-dark.jpg);
+}
+
+body.dark {
+    background-color: hsl(235, 21%, 11%);
+}
+
+.app form.dark {
+    background-color: hsl(235, 24%, 19%);
+}
+
+.app form button.dark {
+    background-color: hsl(235, 24%, 19%);
+    border-color: #444;
+}
+
+.app form button.dark:hover {
+    border-color: hsl(192, 100%, 67%) hsl(280, 87%, 65%) hsl(280, 87%, 65%);
+    transform: rotate(320deg);
+}
+
+.app form input.dark {
+    background-color: hsl(235, 24%, 19%);
+    color: #999;
+}
+
+.allTasks.dark {
+    background-color: hsl(235, 24%, 19%);
+}
+
+.task button.dark {
+    background-color: hsl(235, 24%, 19%);
+    border-color: #444;
+}
+
+.task button.dark:hover {
+    border-color: hsl(192, 100%, 67%) hsl(280, 87%, 65%) hsl(280, 87%, 65%);
+
+}
+
+.task.dark {
+    color: white
+}
+
+.filterAllTasks.active.dark {
+    color: skyblue;
+}
+
+
+.filterActiveTasks.active.dark {
+    color: skyblue;
+}
+
+
+.filterTasksCompleted.active.dark {
+    color: skyblue;
+}
+
+.allTasks .options .filterOptions li.dark:hover {
+    color: white;
+}
+
+.clearCompletedTasks {
+    cursor: pointer;
+}
+
+/* light mode mobile */
+@media (max-width:600px) {
+    body {
+        width: 375px;
+    }
+
+    .background-image {
+        background-image: url(./images/bg-mobile-light.jpg);
+        background-repeat: no-repeat;
+        width: 375px;
+        height: 45vh;
+    }
+
+    .background-emptyplace {
+        height: 55vh;
+        width: 375px;
+    }
+
+    .app {
+        top: 7%;
+        transform: translateX(-50%);
+        width: 90%;
+    }
+
+    .header h1 {
+        font-size: 30px;
+        letter-spacing: 8px;
+    }
+
+    .app form {
+        margin-top: 10%;
+    }
+
+    .darkIcon {
+        cursor: auto;
+    }
+
+    .app form button {
+        width: 18px;
+        height: 18px;
+        margin-left: 7%;
+        margin-top: 4%;
+    }
+
+    .app form input {
+        width: 80%;
+
+    }
+
+
+
+    .allTasks .listOfTasks h3 {
+        width: 80%;
+        font-size: 16px;
+    }
+
+
+    .task button {
+        width: 18px;
+        height: 18px;
+        margin-left: 7%;
+        margin-top: 3%;
+    }
+
+    .allTasks .options .filterOptions {
+        display: flex;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 100%;
+        justify-content: center;
+        background-color: white;
+        margin-top: 15%;
+        padding: 13px 0;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+    .background-image.dark {
+        background-image: url(./images/bg-mobile-dark.jpg);
+    }
+
+    .allTasks .options .filterOptions.dark {
+        background-color: hsl(235, 24%, 19%);
+    }
+
+
+
+}

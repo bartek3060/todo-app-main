@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Todo app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" type="module" defer></script>
+
+
+
+
+</head>
+
+<body>
+  <section class="background-image">
+
+  </section>
+  <section class="background-emptyplace"></section>
+  <section class="app">
+    <div class="header">
+      <h1>TODO</h1>
+      <div class="dark-mode-icone">
+        <img class="darkIcon" src="./images/icon-moon.svg" alt="">
+      </div>
+    </div>
+    <form action="" class="addTask">
+      <button class="addTaskBTN"></button>
+
+      <input type="text" value="Create a new todo...">
+    </form>
+    <div class="allTasks">
+      <ul class="listOfTasks">
+
+
+      </ul>
+      <ul class="options">
+        <li class="numberOfTasks">0 items left</li>
+        <li>
+          <ul class="filterOptions">
+            <li class="filterAllTasks active">All</li>
+            <li class="filterActiveTasks">Active</li>
+            <li class="filterTasksCompleted">Completed</li>
+          </ul>
+        </li>
+        <li class="clearCompletedTasks">Clear Completed</li>
+
+
+
+
+
+      </ul>
+
+
+    </div>
+
+    <h3 class="dragAndDtopInfo">Drag and drop to reorder list</h3>
+  </section>
+
+
+
+</body>
+
+</html>
