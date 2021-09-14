@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
-    ;
+    overflow-x: hidden;
 }
 
 /* light-mode Desktop */
@@ -40,6 +40,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     text-align: left;
+    width: 50vw;
 
 
 }
@@ -122,6 +123,7 @@ ul {
     padding: 10px 0;
     border-bottom: 1px solid #eee;
     transition: 0.3s;
+
 }
 
 .task button {
@@ -159,6 +161,7 @@ ul {
 .allTasks .options {
     display: flex;
     justify-content: space-between;
+
     color: #aaa;
     padding: 10px 10px 15px 10px;
     font-size: 14px;
@@ -172,13 +175,18 @@ ul {
 .allTasks .options .filterOptions {
     display: flex;
 
+
 }
 
 .allTasks .options .filterOptions li {
-    padding: 0 5px;
+    padding: 0 5px 0 0;
     cursor: pointer;
     transition: 0.3s;
 
+}
+
+.allTasks .options .filterOptions li.filterTasksCompleted {
+    padding: 0;
 }
 
 .allTasks .options .filterOptions li:hover {
@@ -190,12 +198,14 @@ ul {
 }
 
 .dragAndDtopInfo {
-    text-align: center;
     width: 100%;
+    margin: 18vh 10px 0 10px;
+    text-align: center;
     font-size: 12px;
     font-weight: 400;
     color: #aaa;
-    margin-top: 18vh;
+    /* margin-top: 18vh; */
+    padding: 0 10px;
 }
 
 .allTasks .listOfTasks img {
@@ -308,22 +318,18 @@ body.dark {
     cursor: pointer;
 }
 
-/* light mode mobile */
-@media (max-width:600px) {
+@media (max-width:1024px) {
     body {
-        width: 375px;
+        width: 100vw;
     }
 
     .background-image {
-        background-image: url(./images/bg-mobile-light.jpg);
-        background-repeat: no-repeat;
-        width: 375px;
-        height: 45vh;
+        background-image: url(./images/bg-desktop-light.jpg);
+        width: 90%;
     }
 
     .background-emptyplace {
-        height: 55vh;
-        width: 375px;
+        width: 90%;
     }
 
     .app {
@@ -387,7 +393,7 @@ body.dark {
     }
 
     .background-image.dark {
-        background-image: url(./images/bg-mobile-dark.jpg);
+        background-image: url(./images/bg-desktop-dark.jpg);
     }
 
     .allTasks .options .filterOptions.dark {
@@ -396,4 +402,55 @@ body.dark {
 
 
 
+}
+
+
+
+
+/* light mode mobile */
+@media (max-width:600px) {
+    body {
+        width: 375px;
+    }
+
+    .background-image {
+        background-image: url(./images/bg-mobile-light.jpg);
+        width: 375px;
+    }
+
+    .background-emptyplace {
+        width: 375px;
+    }
+
+    .background-image.dark {
+        background-image: url(./images/bg-mobile-dark.jpg);
+    }
+}
+
+@media (max-width:360px) {
+    body {
+        max-width: 100vw;
+    }
+
+    .background-image {
+        width: 100vw;
+    }
+
+    .background-emptyplace {
+        width: 100vw;
+    }
+}
+
+@media (max-width:320px) {
+    body {
+        max-width: 100vw;
+    }
+
+    .background-image {
+        width: 100vw;
+    }
+
+    .background-emptyplace {
+        width: 100vw;
+    }
 }

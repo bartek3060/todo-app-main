@@ -143,13 +143,9 @@ const darkModeHandler = (e) => {
     allTasks = [...document.querySelectorAll('.listOfTasks li')]
     buttons = [...document.querySelectorAll('.listOfTasks button')]
     console.log(buttons)
-    if (e.target.src == 'http://localhost:8080/images/icon-moon.svg') {
-        e.target.src = './images/icon-sun.svg'
 
-    } else {
-        e.target.src = './images/icon-moon.svg'
-    }
     darkMode = !darkMode
+
     bgi.classList.toggle('dark')
     document.body.classList.toggle('dark')
     form.classList.toggle('dark')
@@ -162,13 +158,16 @@ const darkModeHandler = (e) => {
     ulMobile.classList.toggle('dark')
     console.log(buttons)
     if (darkMode == true) {
+        e.target.src = './images/icon-sun.svg'
         buttons.forEach(btn => {
             btn.classList.add('dark')
+
         })
         allTasks.forEach(task => {
             task.style.color = "white"
         })
     } else {
+        e.target.src = './images/icon-moon.svg'
         buttons.forEach(btn => {
             btn.classList.remove('dark')
         })
