@@ -118,7 +118,7 @@ const changeListHandler = (e) => {
         aciveTasksclass.classList.add('active')
         completeTasksclass.classList.remove('active')
 
-    } else {
+    } else if (e.target.textContent == 'Completed') {
         listToCreate = allTasks.filter(task => task.dataset.tasktype == 'complete')
         allTasksclass.classList.remove('active')
         aciveTasksclass.classList.remove('active')
