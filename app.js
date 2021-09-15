@@ -28,10 +28,19 @@ const submitFunctionHandler = (e) => {
         const inputValue = queringOneElementFunction('input').value
 
         allTasks.push(renderTask(inputValue, 'active'))
+        const allTasksclass = queringOneElementFunction('.filterAllTasks')
+        const aciveTasksclass = queringOneElementFunction('.filterActiveTasks')
+        const completeTasksclass = queringOneElementFunction('.filterTasksCompleted')
+        allTasksclass.classList.add('active')
+        aciveTasksclass.classList.remove('active')
+        completeTasksclass.classList.remove('active')
+        renderList(allTasks)
         updateNumberOFActiveTasks()
         console.log(inputValue)
         clearInputHandler()
         buttons = [...document.querySelectorAll('.listFfTasks button')]
+
+
     }
 }
 const removeTaskHandler = (e) => {
@@ -55,9 +64,12 @@ const changeStatusHandler = (e) => {
     updateNumberOFActiveTasks()
 }
 const dragAndDrop = () => {
+
     const dragArea = queringOneElementFunction('.listOfTasks')
     new Sortable(dragArea, {
-        animation: 500
+        animation: 200,
+        ghostClass: 'ghost'
+
     })
 }
 
@@ -128,6 +140,13 @@ const changeListHandler = (e) => {
 }
 const removeDoneHandler = (e) => {
     allTasks = allTasks.filter(task => task.dataset.tasktype != 'complete')
+    const allTasksclass = queringOneElementFunction('.filterAllTasks')
+    const aciveTasksclass = queringOneElementFunction('.filterActiveTasks')
+    const completeTasksclass = queringOneElementFunction('.filterTasksCompleted')
+    allTasksclass.classList.add('active')
+    aciveTasksclass.classList.remove('active')
+    completeTasksclass.classList.remove('active')
+
     renderList(allTasks)
 }
 const darkModeHandler = (e) => {

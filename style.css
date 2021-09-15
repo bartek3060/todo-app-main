@@ -318,6 +318,11 @@ body.dark {
     cursor: pointer;
 }
 
+.ghost {
+    background: #6E1D7C;
+    opacity: 0.5;
+}
+
 @media (max-width:1024px) {
     body {
         width: 100vw;
