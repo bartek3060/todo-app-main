@@ -94,12 +94,15 @@ const renderTask = (taskContent, listType) => {
         button.classList.add('complete')
 
     }
+    const div = createElement('div')
+    div.classList.add('buttonDivTask')
     const h3 = createElement('h3')
     h3.textContent = taskContent
     const img = createElement('img')
     img.addEventListener('click', removeTaskHandler)
     img.src = '../images/icon-cross.svg'
-    li.append(button)
+    div.append(button)
+    li.append(div)
     li.append(h3)
     li.append(img)
     ul.append(li)

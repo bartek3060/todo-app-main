@@ -77,13 +77,20 @@ ul {
     cursor: pointer;
 }
 
+.buttonWrap {
+    position: relative;
+    width: 10%;
+}
+
 .app form button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 23px;
     height: 23px;
     border-radius: 50%;
     background-color: white;
-    margin-left: calc((10%-23px)/(4));
-    margin-top: calc((4%-25px)/(2));
     border: 1px solid #ccc;
     transition: 0.3;
 
@@ -91,9 +98,14 @@ ul {
 
 }
 
+.buttonDivTask {
+    position: relative;
+    width: 10%;
+}
+
 .app form button:hover {
     border-color: hsl(192, 100%, 67%) hsl(192, 100%, 67%) hsl(280, 87%, 65%) hsl(280, 87%, 65%);
-    transform: rotate(260deg);
+    /* transform: rotate(260deg); */
 }
 
 .app form input {
@@ -131,8 +143,10 @@ ul {
     height: 23px;
     border-radius: 50%;
     background-color: white;
-    margin-left: calc((10%-23px)/(4));
-    margin-top: calc((3%-23px)/(2));
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border: 1px solid #ccc;
     transition: 0.3s;
 
@@ -144,7 +158,7 @@ ul {
 
 .task button:hover {
     border-color: hsl(192, 100%, 67%) hsl(192, 100%, 67%) hsl(280, 87%, 65%) hsl(280, 87%, 65%);
-    transform: rotate(260deg);
+
 
 
 
@@ -246,7 +260,7 @@ ul {
 
 .task button.complete:hover {
     border-color: hsl(192, 100%, 67%) hsl(192, 100%, 67%) hsl(280, 87%, 65%) hsl(280, 87%, 65%);
-    transform: rotate(0deg);
+
 
 }
 
