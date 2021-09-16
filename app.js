@@ -135,6 +135,8 @@ const changeListHandler = (e) => {
         allTasksclass.classList.remove('active')
         aciveTasksclass.classList.remove('active')
         completeTasksclass.classList.add('active')
+    } else {
+        return
     }
     renderList(listToCreate)
 }
