@@ -127,7 +127,7 @@ ul {
 }
 
 .allTasks .listOfTasks h3 {
-    width: 90%;
+    width: 85%;
 }
 
 .task {
@@ -166,9 +166,10 @@ ul {
 }
 
 .task h3 {
-    padding: 12px 20px;
+    padding: 12px 20px 12px 0px;
 
     font-weight: normal;
+
 
 }
 
@@ -284,7 +285,7 @@ body.dark {
 
 .app form button.dark:hover {
     border-color: hsl(192, 100%, 67%) hsl(280, 87%, 65%) hsl(280, 87%, 65%);
-    transform: rotate(320deg);
+
 }
 
 .app form input.dark {
@@ -374,15 +375,13 @@ body.dark {
     }
 
     .app form button {
-        width: 18px;
-        height: 18px;
-        margin-left: 7%;
-        margin-top: 4%;
+        width: 25px;
+        height: 25px;
+        margin: 0;
     }
 
     .app form input {
         width: 80%;
-
     }
 
 
@@ -422,7 +421,17 @@ body.dark {
         background-color: hsl(235, 24%, 19%);
     }
 
+    .buttonDivTask {
+        width: 20%;
+    }
 
+    .task button {
+        width: 25px;
+        height: 25px;
+
+        margin: 0;
+
+    }
 
 }
 
@@ -447,6 +456,33 @@ body.dark {
     .background-image.dark {
         background-image: url(./images/bg-mobile-dark.jpg);
     }
+
+    .buttonWrap {
+        width: 20%;
+    }
+
+    .app form button {
+        width: 30px;
+        height: 30px;
+
+        margin: 0;
+
+
+
+
+    }
+
+    .buttonDivTask {
+        width: 20%;
+    }
+
+    .task button {
+        width: 25px;
+        height: 25px;
+
+        margin: 0;
+
+    }
 }
 
 @media (max-width:420px) {
@@ -458,6 +494,32 @@ body.dark {
 
     .app form {
         height: 50px;
+
+    }
+
+    .buttonWrap {
+        width: 20%;
+    }
+
+    .app form button {
+        width: 30px;
+        height: 30px;
+
+        margin: 0;
+
+
+
+    }
+
+    .buttonDivTask {
+        width: 20%;
+    }
+
+    .task button {
+        width: 30px;
+        height: 30px;
+
+        margin: 0;
 
     }
 }
@@ -480,6 +542,32 @@ body.dark {
         height: 42px;
 
     }
+
+    .buttonWrap {
+        width: 20%;
+    }
+
+    .app form button {
+        width: 25px;
+        height: 25px;
+
+        margin: 0;
+
+
+
+    }
+
+    .buttonDivTask {
+        width: 20%;
+    }
+
+    .task button {
+        width: 25px;
+        height: 25px;
+
+        margin: 0;
+
+    }
 }
 
 @media (max-width:320px) {
@@ -498,6 +586,32 @@ body.dark {
 
     .app form {
         height: 42px;
+
+    }
+
+    .buttonWrap {
+        width: 20%;
+    }
+
+    .app form button {
+        width: 25px;
+        height: 25px;
+
+        margin: 0;
+
+
+
+    }
+
+    .buttonDivTask {
+        width: 20%;
+    }
+
+    .task button {
+        width: 25px;
+        height: 25px;
+
+        margin: 0;
 
     }
 }

@@ -67,7 +67,7 @@ const dragAndDrop = () => {
 
     const dragArea = queringOneElementFunction('.listOfTasks')
     new Sortable(dragArea, {
-        animation: 200,
+        animation: 300,
         ghostClass: 'ghost'
 
     })
