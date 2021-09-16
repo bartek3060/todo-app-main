@@ -339,6 +339,15 @@ body.dark {
 }
 
 @media (max-width:1024px) {
+    .app form button:hover {
+        border-color: #ccc
+            /* transform: rotate(260deg); */
+    }
+
+    .app form button.dark:hover {
+        border-color: #444
+    }
+
     body {
         width: 100vw;
     }
